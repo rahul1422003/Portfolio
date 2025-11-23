@@ -31,4 +31,5 @@ public class Connection extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("/contact.jsp");
         rd.include(req, resp);
     }
+   
 }

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -11,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .about-container {
@@ -22,6 +23,8 @@ body {
   max-width: 1000px;
   overflow: hidden;
 }
+
+/* ---------- LEFT IMAGE SECTION ---------- */
 
 .about-image {
   flex: 1;
@@ -40,6 +43,8 @@ body {
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/* ---------- RIGHT TEXT SECTION ---------- */
 
 .about-text {
   flex: 2;
@@ -72,4 +77,82 @@ body {
 
 .btn:hover {
   background: #023e8a;
+}
+
+/* ------------------------------------------------------- */
+/* 📱 TABLET RESPONSIVE (768px – 1024px) */
+/* ------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    padding: 30px 20px;
+  }
+
+  .about-image {
+    padding: 20px;
+  }
+
+  .about-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ------------------------------------------------------- */
+/* 📱 MOBILE RESPONSIVE (≤ 600px) */
+/* ------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .about {
+    padding: 20px;
+  }
+
+  .about-container {
+    border-radius: 15px;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* ------------------------------------------------------- */
+/* 📱 SMALL MOBILE RESPONSIVE (≤ 400px) */
+/* ------------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+  .about-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-image img {
+    width: 150px;
+    height: 150px;
+  }
 }

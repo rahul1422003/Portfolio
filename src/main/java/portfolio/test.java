@@ -23,7 +23,6 @@ protected void service(HttpServletRequest req, HttpServletResponse resp) throws 
 		req.setAttribute("name_key", "Rahul");
 		
 		
-		
 		RequestDispatcher rd =req.getRequestDispatcher("/profile.jsp");
 		rd.include(req,resp);
 	}

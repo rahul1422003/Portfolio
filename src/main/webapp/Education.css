@@ -1,86 +1,163 @@
 @charset "UTF-8";
+
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
 }
+
 body{
     background-color: #f4f4f4;
-    color: #333
+    color: #333;
 }
+
+/* ------------------ MAIN SECTION ------------------ */
+
+.education{
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
 h1{
     text-align: center;
     color:#1d3557;
-    margin-top: 30px;
+    margin-bottom: 25px;
     font-size: 2rem;
-
 }
-.education{
-    width: 80%;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px;
 
-}
+/* ------------------ EDUCATION BLOCK ------------------ */
+
 .id{
     margin-bottom: 30px;
 }
+
 .id h3{
     font-size: 1.5rem;
     color: #2980b9;
+    margin-bottom: 10px;
 }
+
 .A{
     font-size: 1rem;
     color: #7f8c8d;
-
 }
-.B,.C{
+
+.B, .C{
     font-size: 1rem;
     color:#34495e;
     margin-top: 10px;
-
+    line-height: 1.5;
 }
+
+/* ------------------ CERTIFICATIONS ------------------ */
+
 .certification{
+    margin-top: 25px;
+}
+
+.certification h3{
     font-size: 1.4rem;
     color:#2980b9;
-    margin-top: 30px;
-    
+    margin-bottom: 10px;
 }
+
 .certification ul{
     list-style-type: none;
-    margin-top: 10px;
-
+    padding: 0;
 }
+
 .certification ul li{
     font-size: 1rem;
     color:#34495e;
-    margin-bottom: 5px;
-
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
 }
+
 .certification ul li::before{
     content:"✔";
     color: #2ecc71;
     margin-right: 10px;
-
-    
+    font-weight: bold;
 }
-.info span{
-    color: rgb(230,104,59);
+
+/* ------------------ HOME PAGE BUTTON ------------------ */
+
+.info {
+    text-align: center;
+    margin-top: 30px;
 }
 
 .info a{
-    text-decoration:  none;
+    text-decoration: none;
     color: #fff;
     background: rgb(36,32,30);
-    margin: 26px 0;
-    padding: 10px 18px;
+    padding: 12px 22px;
     border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
     display: inline-block;
-    transition: .4s ease;
+    transition: .4s;
 }
 
 .info a:hover{
     background: rgb(59,174,209);
+}
+
+/* ------------------------------------------------------ */
+/* 📱 TABLET RESPONSIVE (≤ 768px) */
+/* ------------------------------------------------------ */
+
+@media (max-width: 768px){
+    .education{
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
+
+    .id h3{
+        font-size: 1.3rem;
+    }
+
+    .certification h3{
+        font-size: 1.2rem;
+    }
+}
+
+/* ------------------------------------------------------ */
+/* 📱 MOBILE RESPONSIVE (≤ 480px) */
+/* ------------------------------------------------------ */
+
+@media (max-width: 480px){
+    .education{
+        width: 92%;
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .id h3{
+        font-size: 1.2rem;
+    }
+
+    .certification ul li{
+        font-size: 0.95rem;
+    }
+
+    .info a{
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
 }
