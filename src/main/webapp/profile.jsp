@@ -16,8 +16,8 @@
         <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
 
         <ul id="menuList">
-            <li><a href="profile.jsp">HOME</a></li>
             <li><a href="skills.jsp">SKILLS</a></li>
+            <li><a href="project.jsp">PROJECTS</a></li>
             <li><a href="Education.jsp">EDUCATION</a></li>
             <li><a href="contact.jsp">CONTACT US</a></li>
         </ul>

@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins","Segoe UI",sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #3a0ca3, #0f0c29 60%, #000);
+    color: #fff;
+    padding: 20px;
+}
+
+/* MAIN SECTION */
+.project-section{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* TITLE */
+.title{
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.title span{
+    color: #00eaff;
+}
+
+/* CONTAINER */
+.project-container{
+    display: grid;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* PROJECT CARD */
+.project-card{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(16px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.7);
+    animation: fadeIn .8s;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* PROJECT HEADING */
+.project-card h2{
+    font-size: 1.55rem;
+    color: #00eaff;
+    margin-bottom: 10px;
+}
+
+/* FLOW BADGES */
+.flow{
+    margin: 10px 0 20px;
+}
+.flow span{
+    display: inline-block;
+    background: rgba(0,234,255,0.15);
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin: 4px;
+    font-size: 0.78rem;
+    border: 1px solid rgba(0,234,255,0.25);
+    color: #baf7ff;
+}
+
+.project-card p{
+    font-size: 1rem;
+    opacity: .9;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* TECH BOX */
+.tech-box{
+    margin-bottom: 18px;
+}
+.tech-box span{
+    background: rgba(255,255,255,0.1);
+    padding: 7px 13px;
+    margin: 4px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    font-size: .84rem;
+}
+
+/* STATUS BADGE */
+.status{
+    font-size: 0.85rem;
+    color: #ffcc00;
+    margin-left: 5px;
+}
+
+/* BUTTONS */
+.btn-box{
+    margin-top: 15px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg,#00eaff,#00ff8f);
+    color: #00121c;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0 6px 20px rgba(0,255,200,0.5);
+    transition: .3s;
+}
+
+.btn:hover{
+    transform: scale(1.06);
+    box-shadow: 0 12px 30px rgba(0,255,200,0.7);
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: .6;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-top: 30px;
+}
+.back-btn a{
+    color: #00eaff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* MOBILE UI FIX */
+@media (max-width: 480px){
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .project-card{
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .project-card h2{
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .project-card p{
+        font-size: 0.9rem;
+    }
+
+    .flow span{
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .tech-box span{
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .btn{
+        padding: 8px 14px;
+        font-size: 0.82rem;
+    }
+}
+
+/* TABLET UI FIX */
+@media (max-width: 768px){
+    .project-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card{
+        padding: 20px;
+    }
+}
