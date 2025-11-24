@@ -4,51 +4,56 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>contact</title>
-<link rel="Stylesheet" href="contact.css">
+<title>Contact - Rahul Yadav</title>
+<link rel="stylesheet" href="contact.css?v=3">
 </head>
 <body>
 
-<section class="contact-form">
-    <div class="form-container">
-        <h2>Your Details</h2>
+<section class="contact-section">
 
-        <!-- Firebase form (NO action, NO method) -->
+    <div class="contact-card">
+        <h1>Contact <span>Me</span></h1>
+
+        <!-- Contact Form (Firebase Integrated) -->
         <form id="contactForm">
 
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" required>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="name" required>
+            </div>
 
-            <label for="email">Email: </label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
 
-            <label for="phone">Phone: </label>
-            <input type="tel" id="phone" name="phone">
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" id="phone">
+            </div>
 
-            <label for="message">Message: </label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
 
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-btn">Send Message</button>
         </form>
+
+        <div class="home-btn">
+            <a href="profile.jsp">Go to Home Page</a>
+        </div>
     </div>
+
 </section>
-
-<center>
-    <div class="id">
-        <a href="profile.jsp"> Go to home page</a>
-    </div>
-</center>
-
 
 
 <!-- ⭐ FIREBASE SCRIPT START ⭐ -->
 <script type="module">
 
-    // 🟡 Firebase Latest CDN (v12.6.0)
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
 
-    // Firestore import
     import { 
         getFirestore, 
         addDoc, 
@@ -57,7 +62,6 @@
     } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 
-    // 🟡 YOUR FIREBASE CONFIG
     const firebaseConfig = {
         apiKey: "AIzaSyDjyyclPsohGvcHuk5mUwbBjPL3O4AXT68",
         authDomain: "portfolio-bf19f.firebaseapp.com",
@@ -68,38 +72,34 @@
         measurementId: "G-6CZKTFJE69"
     };
 
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    const db = getFirestore(app);   // ⭐ Firestore initialized
+    const db = getFirestore(app);
 
 
-    // ⭐ FORM SUBMIT EVENT — SAVE TO FIRESTORE
     document.getElementById("contactForm").addEventListener("submit", async (e) => {
-        e.preventDefault(); // stop page reload
+        e.preventDefault();
 
-        // Get input values
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let phone = document.getElementById("phone").value;
         let message = document.getElementById("message").value;
 
         try {
-            // Save document to collection "contactMessages"
             await addDoc(collection(db, "contactMessages"), {
-                name: name,
-                email: email,
-                phone: phone,
-                message: message,
+                name,
+                email,
+                phone,
+                message,
                 timestamp: serverTimestamp()
             });
 
-            alert("✔ Your message has been sent successfully!");
+            alert("✔ Message sent successfully!");
             document.getElementById("contactForm").reset();
 
         } catch (error) {
-            console.error("Error saving message:", error);
-            alert("❌ Something went wrong. Check console.");
+            console.error("Error:", error);
+            alert("❌ Something went wrong!");
         }
     });
 

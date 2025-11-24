@@ -4,37 +4,52 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Education section </title>
-<link rel="Stylesheet" href="Education.css">
+<title>Education - Rahul Yadav</title>
+<link rel="stylesheet" href="Education.css?v=3">
 </head>
 <body>
-       <section class="education">
-        <h1><u>Education</u></h1>
-        <div class="id">
-            <h3> 🎓Bachelor of technology in computer science</h3>
-            <br>
-            <p class="A">LNCT UNIVERSITY, Bhopal | 2023-2027</p><br>
-            <p class="B">CGPA : 8.3/10</p>
-            <P class="C">Relevent coursework: Data Structure,Algorithms,Web Devlopment,Database Managment system<br>
-            software Engineering;</P>
+
+<section class="education">
+
+    <div class="edu-card">
+
+        <h1 class="title">My <span>Education</span></h1>
+
+        <!-- EDUCATION BLOCK -->
+        <div class="block">
+            <h3>🎓 Bachelor of Technology in Computer Science</h3>
+            <p class="sub">LNCT University, Bhopal | 2023 - 2027</p>
+            <p class="score">CGPA: <b>8.3 / 10</b></p>
+            <p class="course">
+                Relevant Coursework:<br>
+                Data Structures, Algorithms, Web Development, Database Management System, <br>
+                Software Engineering
+            </p>
         </div>
-        <div class="certification">
-            <h3> 📜Certifications</h3>
+
+        <!-- CERTIFICATIONS -->
+        <div class="block">
+            <h3>📜 Certifications</h3>
+
             <ul>
-                <li>Introduction to python - infosys springboard</li>
-                <li>Web development - eduskill</li>
-                <li>5 basic spring - infosys springboard</li>
-                <li> Spring security -infosys springboard</li>
-                <li>Introduction to Generative AI - Simplilearn</li>
-                <li>Computer Network - AITM</li>
-                <li>English for IT-2 - Cisco</li>
+                <li>Introduction to Python – Infosys Springboard</li>
+                <li>Web Development – Eduskill</li>
+                <li>5 Basic Spring – Infosys Springboard</li>
+                <li>Spring Security – Infosys Springboard</li>
+                <li>Generative AI – Simplilearn</li>
+                <li>Computer Networks – AITM</li>
+                <li>English for IT – Cisco</li>
             </ul>
-            <center>
-                <div class="info">
-                       <a href="profile.jsp">Go to home page</a>
-                      </div>
-                     </center> 
-    </section>
-</div>
+
+        </div>
+
+        <div class="center">
+            <a href="profile.jsp" class="btn">Go to Home Page</a>
+        </div>
+
+    </div>
+
+</section>
+
 </body>
 </html>
